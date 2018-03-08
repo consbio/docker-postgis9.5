@@ -19,6 +19,6 @@ RUN cd tmp && \
     cd postgis-${POSTGIS_VERSION} && \
     ./configure && make && make install
 
-RUN rm -Rf /tmp
+RUN rm -Rf /tmp/*
 RUN apt-get purge -y --auto-remove build-essential wget postgresql-server-dev-9.5 libxml2-dev libproj-dev libgdal-dev \
     libjson-c-dev libpcre3-dev
